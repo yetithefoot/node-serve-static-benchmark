@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html class="p-home-html js" lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <script type="text/javascript">
+            window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"18a2136710","applicationID":"20382793","transactionName":"b1AAZ0YFDBFZBk0PVlYaL2V3SzAHVgFcFHROViFcWhAQDVQJXBQWcFoPVg==","queueTime":0,"applicationTime":31,"ttGuid":"84B21E76195046B5","agent":""}
+        </script>
+        <script type="text/javascript">
+            window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);
+        </script>
+        <title>
+            Font & Technology Specialists | Monotype
+        </title>
+        <meta content="Explore Monotype fonts and the innovative technologies that bring words to page and screen. Discover our library of over 20,000 classic and new fonts." name="description">
+            <link href="http://www.monotype.com/" rel="canonical"/>
+            <meta content="XSR_lMLcWehCcJQrwzB8BKLem_n2fw9pki_FIHomWzk" name="google-site-verification"/>
+            <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+                <!--fonts-->
+                <link href="/Content/styles.css?v=MY2TOZIRLLxAcqFwNYLv7c5wXGeGnwOw0GfE0WH0tiA1" rel="stylesheet" type="text/css"/>
+                <link href="//fast.fonts.net/cssapi/a46738bf-f9ef-4754-a3f9-06054ffbeddc.css" rel="stylesheet" type="text/css"/>
+                <link href="//fast.fonts.net/cssapi/71feb4d7-37ca-4e03-8506-747fb5c0a9f6.css" rel="stylesheet" type="text/css"/>
+                <!--end fonts-->
+                <!--css-->
+                <!--end css-->
+                <!--js-->
+                <!--end js-->
+                <!--viewport-->
+                <meta content="width=device-width,initial-scale=1.0" name="viewport">
+                    <!--end viewport-->
+                    <!--touch icons-->
+                    <link href="/Content/Vendor/image/favicon/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+                        <link href="/Content/Vendor/image/favicon/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+                            <link href="/Content/Vendor/image/favicon/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+                                <link href="/Content/Vendor/image/favicon/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+                                    <link href="/Content/Vendor/image/favicon/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+                                        <link href="/Content/Vendor/image/favicon/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+                                            <link href="/Content/Vendor/image/favicon/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+                                                <link href="/Content/Vendor/image/favicon/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+                                                    <link href="/Content/Vendor/image/favicon/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+                                                        <link href="/Content/Vendor/image/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+                                                            <link href="/Content/Vendor/image/favicon/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+                                                                <link href="/Content/Vendor/image/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+                                                                    <link href="/Content/Vendor/image/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+                                                                        <link href="/Content/Vendor/image/favicon/manifest.json" rel="manifest">
+                                                                            <link href="/Content/Vendor/image/favicon/favicon.ico" rel="shortcut icon">
+                                                                                <meta content="#da532c" name="msapplication-TileColor">
+                                                                                    <meta content="/Content/Vendor/image/favicon/mstile-144x144.png" name="msapplication-TileImage">
+                                                                                        <meta content="/Content/Vendor/image/favicon/browserconfig.xml" name="msapplication-config">
+                                                                                            <meta content="#ffffff" name="theme-color">
+                                                                                                <!--end touch icons-->
+                                                                                                <!--baseline on/off-->
+                                                                                                <!--<link rel="stylesheet" href="//basehold.it/12">-->
+                                                                                                <!--end baseline-->
+                                                                                                <!--[if lt IE 9]>
+      <script src="javascript/vendor/respond.js"></script>
+      <script src="javascript/vendor/html5shiv-printshiv.js"></script>
+      <script src="javascript/vendor/rem.min.js"></script>
+      <script src="javascript/vendor/placeholders.min.js"></script>
+    <![endif]-->
+                                                                                                <script type="text/javascript">
+                                                                                                    var translation = {
+        'Menu': 'MENU',
+        'Close': 'CLOSE'
+    }
+                                                                                                </script>
+                                                                                            </meta>
+                                                                                        </meta>
+                                                                                    </meta>
+                                                                                </meta>
+                                                                            </link>
+                                                                        </link>
+                                                                    </link>
+                                                                </link>
+                                                            </link>
+                                                        </link>
+                                                    </link>
+                                                </link>
+                                            </link>
+                                        </link>
+                                    </link>
+                                </link>
+                            </link>
+                        </link>
+                    </link>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body class="p-home">
+        <section class="b-home">
+            <header class="b-1-0-0-header g-container">
+                <div class="g-block">
+                    <div class="g-row">
+                        <div class="g-col">
+                            <div class="b-navigation">
+                                <h1 class="b-logo">
+                                    <a class="b-logo__link" href="/" title="Home">
+                                        Monotype
+                                    </a>
+                                    <!--end b-logo__link-->
+                                </h1>
+                                <!--end b-logo-->
+                                <nav class="b-navigation__nav ">
+                                    <ul class="b-navigation__list">
+                                        <!--Search-->
+                                        <li class="b-navigation__item b-navigation__item--search">
+                                            <form action="search/" class="b-mobile-search" method="get">
+                                                <div class="b-mobile-search__input-wrapper">
+                                                    <input autocomplete="off" class="b-mobile-search__input" name="q" placeholder="Search" type="text"/>
+                                                </div>
+                                                <div class="b-mobile-search__submit-wrapper">
+                                                    <input class="b-mobile-search__submit" title="" type="submit" value="Search"/>
+                                                </div>
+                                            </form>
+                                            <!--end b-mobile-search-form-->
+                                        </li>
+                                        <li class="b-navigation__item">
+                                            <a class="b-navigation__link" href="/fonts/" title="Fonts">
+                                                Fonts
+                                            </a>
+                                        </li>
+                                        <li class="b-navigation__item">
+                                            <a class="b-navigation__link" href="/technology/" title="Technology">
+                                                Technology
+                                            </a>
+                                        </li>
+                                        <li class="b-navigation__item">
+                                            <a class="b-navigation__link" href="/resources/" title="Resources">
+                                                Resources
+                                            </a>
+                                        </li>
+                                        <li class="b-navigation__item">
+                                            <a class="b-navigation__link" href="/blog/" title="Blog">
+                                                Blog
+                                            </a>
+                                        </li>
+                                        <li class="b-navigation__item">
+                                            <a class="b-navigation__link" href="/company/" title="Company">
+                                                Company
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--end b-navigation__list-->
+                                    <ul class="b-navigation__breadcrumb">
+                                        <li class="b-navigation__breadcrumb__item b-navigation__breadcrumb__item--selected">
+                                            <h2>
+                                                <a class="b-navigation__breadcrumb__item__link" href="/">
+                                                    Monotype
+                                                </a>
+                                            </h2>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!--end b-navigation__navigation-->
+                            </div>
+                            <aside class="b-meta b-meta--interaction">
+                                <ul class="b-meta__list">
+                                    <li class="b-meta__item ">
+                                        <a class="b-meta__search b-meta__link initial" disabled="disabled" href="/search/" title="">
+                                            <span class="b-meta__search-text b-meta__search-text--inactive" style="display: inline;">
+                                                Search
+                                            </span>
+                                            <span class="b-meta__search-text b-meta__search-text--active" style="display: none;">
+                                                Close Search
+                                            </span>
+                                            <!--This allows setting a text in CMS-->
+                                        </a>
+                                    </li>
+                                    <!--end b-meta__item-->
+                                </ul>
+                                <!--end b-meta__list-->
+                            </aside>
+                        </div>
+                        <!--end g-col-->
+                    </div>
+                    <!--end g-row-->
+                </div>
+                <!--end g-block-->
+            </header>
+            <section class="b-3-2-0-intro-search b-3-2-0-intro-search--interaction g-container b-3-2-0-intro-search--interaction-fullwidth b-3-2-0-intro-search--interaction-active" style="display: none;">
+                <div class="b-lead g-block">
+                    <div class="g-row">
+                        <div class="b-lead__text g-col">
+                            <p>
+                                Search Monotype:
+                            </p>
+                        </div>
+                        <!--b-lead__text-->
+                    </div>
+                    <!--end g-row-->
+                </div>
+                <!--end b-lead-->
+                <form action="search/" class="b-search-form" method="get">
+                    <div class="g-block">
+                        <div class="g-row">
+                            <div class="g-col">
+                                <input autocomplete="off" class="b-search-form__input" name="q" placeholder="Typefaces, case studies, HTML5 ads..." type="search"/>
+                            </div>
+                            <!--end g-col-->
+                        </div>
+                        <!--end g-row-->
+                    </div>
+                    <!--end b-search-->
+                    <div class="b-error-message g-block">
+                        <!--This is a server side error message and is hidden by default-->
+                        <div class="g-row">
+                            <div class="g-col">
+                                <div class="b-error-message__output">
+                                    No results were found for XY. Please try another search term or get in touch with our experts. [Server Side Message]
+                                </div>
+                                <!--end b-error-message__output-->
+                            </div>
+                            <!--end g-col-->
+                        </div>
+                        <!--end g-row-->
+                    </div>
+                    <!--end b-error-message-->
+                    <div class="b-button b-button--search g-block">
+                        <div class="g-row">
+                            <div class="g-col">
+                                <input class="b-button__item" disabled="disabled" title="" type="submit" value="Search">
+                                </input>
+                            </div>
+                            <!--end g-col-->
+                        </div>
+                        <!--end g-row-->
+                    </div>
+                    <!--end b-button-->
+                </form>
+                <!--end b-search-->
+            </section>
+            <section class="b-typetester b-typetester--home js-getuniqueid" id="682495a4-9155-471d-b9fe-0b8ab353ed78">
+                <div class="g-container b-typetester__canvas-wrapper">
+                    <div class="g-block b-typetester__uptown">
+                        <div class="g-row">
+                            <div class="g-col">
+                                <div class="b-typetester__canvas mCustomScrollbar" data-mcs-theme="dark">
+                                    <div class="b-typetester__write weight-800 initial" contenteditable="true" font-stretch="0" font-style="0" font-weight="10" id="homePagetester" placeholder="We are the <a href='/company'>company</a> behind type. Our <a href='/Fonts'>fonts</a> and <a href='/technology'>technologies</a> bring the world&rsquo;s words to the page and screen.<span class=&quot;b-typetester__cursor&quot;>|</span>" spellcheck="false" style="font-family:Malabar LT W02 Heavy">
+                                        We are the
+                                        <a href="/company">
+                                            company
+                                        </a>
+                                        behind type. Our
+                                        <a href="/Fonts">
+                                            fonts
+                                        </a>
+                                        and
+                                        <a href="/technology">
+                                            technologies
+                                        </a>
+                                        bring the world’s words to the page and screen.
+                                        <span class="b-typetester__cursor">
+                                            |
+                                        </span>
+                                    </div>
+                                </div>
+                                <!--end b-typetester-canvas-->
+                            </div>
+                            <!--end g-col-->
+                        </div>
+                        <!--end g-row-wide-->
+                    </div>
+                    <!--end g-block-->
+                </div>
+                <!--end g-container-->
+                <div class="b-typetester__meta-wrapper">
+                    <div class="g-container">
+                        <div class="g-block b-typetester__downtown">
+                            <div class="g-row">
+                                <div class="b-typetester__meta g-col">
+                                    <select class="b-typetester__meta-select" id="fontSelector">
+                                        <option data-id="521506" default-css="Malabar LT W02 Heavy" font-stretch="0" font-style="0" font-weight="10" value="521506">
+                                            Malabar
+                                        </option>
+                                        <option data-id="1603038" default-css="Gill Sans Nova W04 UltraBold" font-stretch="0" font-style="0" font-weight="21" value="1603038">
+                                            Gill Sans Nova
+                                        </option>
+                                        <option data-id="1568886" default-css="Joanna Nova W04 Thin Italic" font-stretch="0" font-style="1" font-weight="3" value="1568886">
+                                            Joanna Nova
+                                        </option>
+                                        <option data-id="1604622" default-css="Joanna Sans W04 Bold" font-stretch="0" font-style="0" font-weight="8" value="1604622">
+                                            Joanna Sans Nova
+                                        </option>
+                                    </select>
+                                    <div class="b-typetester__meta-list-home">
+                                        <div class="hideDiv" id="521506" style="">
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--weight">
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="5" font-id="521506" title="">
+                                                        Regular
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="8" font-id="521506" title="">
+                                                        Bold
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item b-typetester__list-item--selected">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="10" font-id="521506" title="">
+                                                        Heavy
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--style">
+                                                <li class="b-typetester__list-item style">
+                                                    <a class="b-typetester__list-trigger fontStyle" data-id="1" font-id="521506" title="">
+                                                        italic
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="hideDiv" id="1603038" style="display:none">
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--weight">
+                                                <li class="b-typetester__list-item b-typetester__list-item--selected">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="21" font-id="1603038" title="">
+                                                        UltraBold
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="24" font-id="1603038" title="">
+                                                        Inline
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="15" font-id="1603038" title="">
+                                                        Shadow
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="23" font-id="1603038" title="">
+                                                        Outline
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="22" font-id="1603038" title="">
+                                                        Deco
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--style">
+                                                <li class="b-typetester__list-item stretch">
+                                                    <a class="b-typetester__list-trigger fontStretch" data-id="3" font-id="1603038" title="">
+                                                        condensed
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="hideDiv" id="1568886" style="display:none">
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--weight">
+                                                <li class="b-typetester__list-item b-typetester__list-item--selected">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="3" font-id="1568886" title="">
+                                                        Thin
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="2" font-id="1568886" title="">
+                                                        Light
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="4" font-id="1568886" title="">
+                                                        Book
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="5" font-id="1568886" title="">
+                                                        Regular
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="6" font-id="1568886" title="">
+                                                        Medium
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="8" font-id="1568886" title="">
+                                                        Bold
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="13" font-id="1568886" title="">
+                                                        ExtraBold
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="9" font-id="1568886" title="">
+                                                        Black
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--style">
+                                                <li class="b-typetester__list-item style b-typetester__list-item--selected">
+                                                    <a class="b-typetester__list-trigger fontStyle" data-id="1" font-id="1568886" title="">
+                                                        italic
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="hideDiv" id="1604622" style="display:none">
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--weight">
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="3" font-id="1604622" title="">
+                                                        Thin
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="2" font-id="1604622" title="">
+                                                        Light
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="4" font-id="1604622" title="">
+                                                        Book
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="5" font-id="1604622" title="">
+                                                        Regular
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="6" font-id="1604622" title="">
+                                                        Medium
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item b-typetester__list-item--selected">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="8" font-id="1604622" title="">
+                                                        Bold
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="13" font-id="1604622" title="">
+                                                        ExtraBold
+                                                    </a>
+                                                </li>
+                                                <li class="b-typetester__list-item">
+                                                    <a class="b-typetester__list-trigger fontWeight" data-id="9" font-id="1604622" title="">
+                                                        Black
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul class="b-typetester__meta-list b-typetester__meta-list--style">
+                                                <li class="b-typetester__list-item style">
+                                                    <a class="b-typetester__list-trigger fontStyle" data-id="1" font-id="1604622" title="">
+                                                        italic
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end b-typetester__meta-->
+                            </div>
+                            <!--end g-row-->
+                        </div>
+                        <!--end g-block-->
+                    </div>
+                    <div class="thin-progress-bar">
+                    </div>
+                    <div class="g-container b-footer-legal">
+                        <div class="g-block">
+                            <div class="g-row">
+                                <ul class="b-footer-legal__list g-col language">
+                                    <li class="b-footer-legal__item plain-text-item">
+                                        ©2016 Monotype Imaging Inc.
+                                    </li>
+                                    <li class="b-footer-legal__item plain-text-item">
+                                        <strong>
+                                            Language:
+                                        </strong>
+                                    </li>
+                                    <li class="b-footer-legal__item">
+                                        <select class="b-typetester__meta-select" id="js-languageswitcher">
+                                            <option selected="" value="/">
+                                                English
+                                            </option>
+                                            <option data-id="sande" value="/de">
+                                                German
+                                            </option>
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="b-footer-legal__list g-col">
+                                    <li class="b-footer-legal__item">
+                                        <a class="b-footer-legal__link" href="/legal/trademarks/" title="">
+                                            Trademarks
+                                        </a>
+                                    </li>
+                                    <li class="b-footer-legal__item">
+                                        <a class="b-footer-legal__link" href="/legal/terms-of-use/" title="">
+                                            Terms of Use
+                                        </a>
+                                    </li>
+                                    <li class="b-footer-legal__item">
+                                        <a class="b-footer-legal__link" href="/legal/terms-conditions-of-business/" title="">
+                                            Terms & Conditions of Business
+                                        </a>
+                                    </li>
+                                    <li class="b-footer-legal__item">
+                                        <a class="b-footer-legal__link" href="/legal/privacy-policy/" title="">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <li class="b-footer-legal__item">
+                                        <a class="b-footer-legal__link" href="/legal/mtx-licensing-statement/" title="">
+                                            MTX Licensing Statement
+                                        </a>
+                                    </li>
+                                    <li class="b-footer-legal__item">
+                                        <a class="b-footer-legal__link" href="http://ir.monotype.com/investor-relations/default.aspx" title="">
+                                            Investors
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p class="b-footer-legal__list g-col msg-legal">
+                                    Monotype is not responsible for the content or functionality of third party websites linked from our site. Learn more
+                                    <a class="b-footer-legal__link" href="/legal/terms-of-use/" title="">
+                                        here
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end b-typetester__meta-wrapper-->
+            </section>
+            <!--end b-typetester-->
+            <script type="text/javascript">
+                var AppSpace = AppSpace || {};
+    if (AppSpace.MainPageTypeTesterDataOld == null) {
+        AppSpace.MainPageTypeTesterDataOld = [];
+    }
+    AppSpace.pushTypeTesterDataOld = function (typeTesterData, guid) {
+        AppSpace.MainPageTypeTesterDataOld.push({ 'FullData': typeTesterData, 'Id': guid });
+    };
+
+    function pushValues() {
+        var array = JSON.parse('[{&quot;CssName&quot;:&quot;Malabar LT W02 Regular&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:5,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:521506,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Malabar LT W02 Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:5,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:521506,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Malabar LT W02 Bold&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:8,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:521506,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;MalabarLTW02-BoldItalic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:8,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:521506,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Malabar LT W02 Heavy&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:10,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:521506,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;MalabarLTW02-HeavyItali&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:10,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:521506,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Gill Sans Nova W04 UltraBold&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:21,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1603038,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Gill Sans Nova W04 Cn UltBold&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:21,&quot;style&quot;:0,&quot;stretch&quot;:3,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1603038,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Gill Sans Nova Inline W04 Cond&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:24,&quot;style&quot;:0,&quot;stretch&quot;:3,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1603038,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Gill Sans Nova Shadowed W04 Md&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:15,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1603038,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Gill Sans Nova Shadowed W04 Ou&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:23,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1603038,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Gill Sans Nova Deco W04 Rg&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:22,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1603038,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Gill Sans Nova Inline W04 Rg&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:24,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1603038,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Thin&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:3,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Thin Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:3,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Light&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:2,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Light Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:2,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Book&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:4,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Book Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:4,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Regular&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:5,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:5,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Medium&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:6,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Medium Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:6,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Bold&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:8,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Bold Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:8,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 ExtraBold&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:13,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 ExtraBold It&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:13,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Black&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:9,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Nova W04 Black Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:9,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1568886,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Thin&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:3,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Thin Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:3,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Light&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:2,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Light Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:2,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Book&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:4,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Book Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:4,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Regular&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:5,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:5,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Medium&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:6,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Medium Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:6,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Bold&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:8,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Bold Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:8,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Extra Bold&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:13,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Extra Bold It&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:13,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Black&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:9,&quot;style&quot;:0,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]},{&quot;CssName&quot;:&quot;Joanna Sans W04 Black Italic&quot;,&quot;CatName&quot;:null,&quot;Weight&quot;:9,&quot;style&quot;:1,&quot;stretch&quot;:0,&quot;FontContentId&quot;:null,&quot;FontFamilyId&quot;:1604622,&quot;Languageses&quot;:[],&quot;Scripts&quot;:[],&quot;Others&quot;:[],&quot;UnicodeRangeses&quot;:[]}]'.replace(/&quot;/g, "\""));
+        var tempArr = eval(array);
+        AppSpace.pushTypeTesterDataOld(tempArr, '682495a4-9155-471d-b9fe-0b8ab353ed78');
+    };
+    pushValues();
+            </script>
+        </section>
+        <script src="/Content/Vendor/javascript/vendor/jquery-1.11.2.min.js">
+        </script>
+        <script src="/scripts/jquery-ui-1.11.4.min.js">
+        </script>
+        <script src="/scripts/jquery.validate.min.js">
+        </script>
+        <script src="/Content/Vendor/javascript/vendor/webfontloader.js">
+        </script>
+        <script src="/Content/CustomJs/Marketo/marketo.forms2.min.js">
+        </script>
+        <script src="/Content/Vendor/javascript/vendor/assets.main.js">
+        </script>
+        <script src="/Content/CustomJs/Common.js">
+        </script>
+        <script src="/Content/CustomJs/TypeTester/MainPageTypeTester.js">
+        </script>
+        <script src="/Content/Vendor/javascript/vendor/jvfloat.min.js">
+        </script>
+        <script src="/Content/Vendor/javascript/vendor/responsive-nav.min.js">
+        </script>
+        <script src="/Content/Vendor/javascript/monotype.js">
+        </script>
+        <script>
+            (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-36726419-1', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <script type="text/javascript">
+            var axel = Math.random() + "";
+        var a = axel * 10000000000000;
+        document.write('<iframe src="https://5076634.fls.doubleclick.net/activityi;src=5076634;type=retar0;cat=retar0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+        </script>
+        <noscript>
+            <iframe frameborder="0" height="1" src="https://5076634.fls.doubleclick.net/activityi;src=5076634;type=retar0;cat=retar0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" style="display:none" width="1">
+            </iframe>
+        </noscript>
+    </body>
+</html>
