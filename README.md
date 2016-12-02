@@ -14,14 +14,14 @@ Testings process is done by `ab` utility by apache. Sending 100000 requests with
 
 
 ## Commands
-`npm start` — run node servers
-`npm test` — run testing utility
+`npm start` — run node servers  
+`npm test` — run testing utility  
 
 
 ## Results
-`node-static` — 7565.63 req/sec, 0.132 ms/req, 1499.83 Kb/sec
-`server-static` — 6459.55 req/sec, 0.155 ms/req, 1280.99 Kb/sec
-`nginx` — __15592.83 req/sec__, __0.064 ms/req__, __896480.43 Kb/sec__
+`node-static` — 7565.63 req/sec, 0.132 ms/req, 1499.83 Kb/sec  
+`server-static` — 6459.55 req/sec, 0.155 ms/req, 1280.99 Kb/sec  
+`nginx` — __15592.83 req/sec__, __0.064 ms/req__, __896480.43 Kb/sec__  
 
 Clean nginx istall 2-3 times faster than any node solutions. For real networks, gzipped content, HTTPS, enabled caching results will be different.
 
